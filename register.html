@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/6d821085f1.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="assets/images/album_sheet.png"
+                alt="header-logo"
+                class="logo-icon"
+                width="97"
+                height="73"
+              />
+            </a>
+            ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ
+          </div>
+          <nav class="nav">
+            <a href="#">Питание</a>
+            <a href="#">Сон</a>
+            <a href="#">Спорт</a>
+            <a href="#">Команда</a>
+            <a href="#">Личный кабинет</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main-register">
+      <form class="form">
+        <div class="form-row single">
+          <div class="form-group-col">
+            <label>Псевдоним</label>
+            <input type="text" class="form-input" />
+          </div>
+        </div>
+        <div class="form-row double">
+          <div class="form-group">
+            <label>Фамилия</label>
+            <input type="text" class="form-input" />
+          </div>
+          <div class="form-group-reverse">
+            <input type="text" class="form-input" />
+            <label>Пол</label>
+          </div>
+        </div>
+        <div class="form-row double">
+          <div class="form-group">
+            <label>Имя</label>
+            <input type="text" class="form-input" />
+          </div>
+          <div class="form-group-reverse">
+            <input type="text" class="form-input" />
+            <label>Дата рождения</label>
+          </div>
+        </div>
+        <div class="form-row double">
+          <div class="form-group">
+            <label>Отчество</label>
+            <input type="text" class="form-input" />
+          </div>
+          <div class="form-group-reverse">
+            <input type="text" class="form-input" />
+            <label>Страна</label>
+          </div>
+        </div>
+        <div class="form-row double">
+          <div class="form-group">
+            <label>Телефон</label>
+            <input type="text" class="form-input" />
+          </div>
+          <div class="form-group-reverse">
+            <input type="text" class="form-input" />
+            <label>Почта</label>
+          </div>
+        </div>
+        <div class="button-section">
+          <button type="submit" class="register-btn">Зарегистрироваться</button>
+        </div>
+        <div class="quick-registration">
+          <a href="quick_reg.html" class="quick-link">Быстрая регистрация</a>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <!-- <div class="footer-logo">
+              <div class="footer-logo-icon"></div>
+              ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ
+            </div> -->
+            <div class="footer-logo">
+              <a href="index.html">
+                <img
+                  src="assets/images/album_sheet.png"
+                  alt="header-logo"
+                  class="logo-icon"
+                  width="97"
+                  height="73"
+                />
+              </a>
+              ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ
+            </div>
+            <ul>
+              <li><a href="#">Регистрация</a></li>
+              <li><a href="#">Сотрудничество</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="#">Питание</a></li>
+              <li><a href="#">Сон</a></li>
+              <li><a href="#">Спорт</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Обратная связь</h4>
+            <ul>
+              <!-- 📧 -->
+              <li>
+                <a href="#" class="footer-nav-link"
+                  ><i class="fas fa-questn"></i> Задать вопрос</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-nav-link"
+                  ><i class="fas fa-envp"></i> Оставить отзыв</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-nav-link"
+                  ><i class="fas fa-phn"></i> Служба поддержки пользователей</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-nav-link"
+                  ><i class="fas fa-cnts"></i>Отзывы пользователей</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              name="search-input"
+              placeholder="Ищете что-то?"
+            />
+            <label
+              for="search-input"
+              class="search-btn"
+              onclick="document.querySelector('.search-input').focus()"
+            >
+              <i class="fas fa-magnifying-glass"></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>©Все права защищены, 2025</p>
+          <p>
+            Материалы, размещенные на сайте, не предназначены для лиц младше 18
+            лет и не заменяют прием врача.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* .grid {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
+        border-bottom: 3px dashed #a8d5ba;
+      } */
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .title {
+        font-size: 28px;
+        color: #87ceeb;
+        font-weight: normal;
+        margin: 0;
+        letter-spacing: 2px;
+      }
+
+      .form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-row {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 40px;
+      }
+
+      .form-row.single {
+        justify-content: center;
+      }
+
+      .form-row.double {
+        justify-content: space-between;
+      }
+
+      .form-group,
+      .form-group-reverse {
+        display: flex;
+        align-items: center;
+        min-width: 270px;
+        gap: 20px;
+        flex: 1;
+      }
+
+      .form-group label {
+        min-width: 80px;
+        text-align: right;
+      }
+
+      .form-group-reverse {
+        justify-content: flex-start;
+      }
+
+      .form-row.single .form-group {
+        flex: 0 0 auto;
+      }
+
+      .form-group-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      label {
+        color: #8bc34a;
+        font-size: 1rem;
+        /* text-align: right; */
+      }
+
+      .from-group label {
+        min-width: 80px;
+      }
+
+      .form-input {
+        border: 2px dashed #87ceeb;
+        border-radius: 4px;
+        padding: 8px 12px;
+        width: 160px;
+        height: 20px;
+        background-color: white;
+        font-size: 14px;
+      }
+
+      .form-input:focus {
+        outline: none;
+        /* border-color: #5dade2; */
+      }
+
+      .button-section {
+        text-align: center;
+        margin: 40px 0 20px 0;
+      }
+
+      .register-btn {
+        background-color: white;
+        border: 2px solid #8bc34a;
+        color: #333;
+        padding: 12px 30px;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .text-block::hover,
+      .register-btn:hover {
+        background-color: #f0f8e8;
+      }
+
+      .quick-registration {
+        text-align: center;
+        margin: 0 0 0px 0;
+      }
+
+      .quick-link {
+        color: #87ceeb;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid #87ceeb;
+        padding-bottom: 2px;
+      }
+
+      .quick-link:hover {
+        color: #5dade2;
+        border-bottom-color: #5dade2;
+      }
+    </style>
+  </body>
+</html>
