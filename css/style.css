@@ -10,6 +10,10 @@
   /* --blue: ; */
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Great Vibes";
   src: url("../assets/fonts/Great_Vibes/GreatVibes-Regular.ttf")
@@ -58,6 +62,12 @@ body {
   /* padding: 0 20px; */
 }
 
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
   background: white;
   /* padding: 15px 0; */
@@ -86,13 +96,17 @@ main {
   display: flex;
   align-items: center;
   font-size: 14px;
-  /* color: #7bb3c7; */
+  /* color: var(--light-blue); */
   text-transform: uppercase; /* Преобразуем текст в верхний регистр */
   font-size: 16px; /* Устанавливаем размер шрифта */
-  font-weight: 450; /* Устанавливаем жирное начертание шрифта */
-  background: linear-gradient(to right, #8cd1ec, #000000);
+  font-weight: bold; /* Устанавливаем жирное начертание шрифта */
+  background: linear-gradient(to right, var(--light-blue), #000000);
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.footer-logo-bold-links {
+  font-weight: bold;
 }
 
 .nav {
@@ -108,7 +122,7 @@ main {
 }
 
 .nav a:hover {
-  color: #7bb3c7;
+  color: var(--light-blue);
 }
 
 .hamburger {
@@ -183,7 +197,7 @@ main {
   font-family: "Fira Sans", sans-serif;
   background: white;
   /* border: 1px solid #ccc; */
-  border: 1px dashed var(--light-green-300);
+  border: 2px dashed var(--light-green-300);
   padding: 12px 30px;
   font-size: 1.5rem;
   color: #333;
@@ -279,14 +293,14 @@ main.main-register {
   display: flex;
   align-items: center;
   font-size: 12px;
-  color: #7bb3c7;
+  color: var(--light-blue);
   width: 286px;
 }
 
 .footer-logo-icon {
   width: 25px;
   height: 15px;
-  background: #7bb3c7;
+  background: var(--light-blue);
   margin-right: 8px;
   border-radius: 2px;
 }
@@ -325,7 +339,7 @@ main.main-register {
 .footer-content ul li a:hover,
 .footer-content ul li a:visited:hover,
 .footer-section ul li a:hover {
-  color: #7bb3c7;
+  color: var(--light-blue);
 }
 
 .footer-content ul li a:visited {
@@ -539,6 +553,12 @@ main.main-register {
   }
 }
 
+@media screen and (width <= 1050px) {
+  .content-section span.boxed-text:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
 @media (width <= 950px) {
   .tree-image {
     background: url("../assets/images/fon_glavnoy_stranitsy_sayta_ZOZh_480w.png")
@@ -598,7 +618,7 @@ main.main-register {
 
 .title {
   font-size: 28px;
-  color: #87ceeb;
+  color: var(--light-blue);
   font-weight: normal;
   margin: 0;
   letter-spacing: 2px;
@@ -686,7 +706,7 @@ label {
 }
 
 .form-input {
-  border: 2px dashed #87ceeb;
+  border: 2px solid var(--light-blue);
   border-radius: 4px;
   padding: 8px 12px;
   width: 160px;
@@ -707,7 +727,7 @@ label {
 
 .register-btn {
   background-color: white;
-  border: 3px dashed var(--light-green-300);
+  border: 2px dashed var(--light-green-300);
   color: #333;
   padding: 12px 30px;
   border-radius: 4px;
@@ -726,16 +746,16 @@ label {
 }
 
 .quick-reg-link {
-  color: #87ceeb;
+  color: var(--light-blue);
+  font-weight: bold;
   text-decoration: none;
   font-size: 14px;
-  border-bottom: 1px solid #87ceeb;
   padding-bottom: 2px;
 }
 
 .quick-reg-link:hover {
-  color: #5dade2;
-  border-bottom-color: #5dade2;
+  color: var(--light-blue);
+  border-bottom-color: var(--light-blue);
 }
 
 .reg-modal {
@@ -788,7 +808,7 @@ label {
 .form-input-quick-reg {
   width: 100%;
   padding: 12px 16px;
-  border: 2px dashed #7dd3fc;
+  border: 2px solid var(--light-blue);
   border-radius: 6px;
   font-size: 14px;
   background-color: white;
