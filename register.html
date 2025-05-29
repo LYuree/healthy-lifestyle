@@ -9,6 +9,7 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="js/index.js" defer></script>
     <title>Регистрация</title>
   </head>
   <body>
@@ -89,9 +90,51 @@
           <button type="submit" class="register-btn">Зарегистрироваться</button>
         </div>
         <div class="quick-registration">
-          <a href="quick_reg.html" class="quick-link">Быстрая регистрация</a>
+          <a href="#" class="quick-reg-link" id="quick-reg-link"
+            >Быстрая регистрация</a
+          >
         </div>
       </form>
+
+      <dialog class="reg-modal" id="reg-modal">
+        <div class="registration-container">
+          <div class="header-quick-reg">
+            <div class="logo">
+              <div class="logo">
+                <a href="index.html">
+                  <img
+                    src="assets/images/album_sheet.png"
+                    alt="header-logo"
+                    class="logo-icon"
+                    width="97"
+                    height="73"
+                  />
+                </a>
+                ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ
+              </div>
+              <!-- <span class="logo-text">ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ</span> -->
+            </div>
+          </div>
+
+          <form class="registration-form">
+            <div class="form-group-quick-reg">
+              <label class="form-label-quick-reg">Псевдоним</label>
+              <input type="text" class="form-input-quick-reg" />
+            </div>
+
+            <div class="form-group-quick-reg">
+              <label class="form-label-quick-reg"
+                >Почта или номер телефона</label
+              >
+              <input type="text" class="form-input-quick-reg" />
+            </div>
+
+            <button type="submit" class="register-button">
+              Зарегистрироваться
+            </button>
+          </form>
+        </div>
+      </dialog>
     </main>
     <footer class="footer">
       <div class="container">
@@ -181,138 +224,101 @@
         </div>
       </div>
     </footer>
-
     <style>
-      /* .grid {
-        display: grid;
-        height: 100vh;
-        grid-template-rows: auto 1fr auto;
-        border-bottom: 3px dashed #a8d5ba;
-      } */
-
-      .logo {
-        display: flex;
-        align-items: center;
+      .reg-modal {
+        border: none !important;
+        border-radius: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-
-      .title {
-        font-size: 28px;
-        color: #87ceeb;
-        font-weight: normal;
-        margin: 0;
-        letter-spacing: 2px;
-      }
-
-      .form {
-        max-width: 600px;
+      .registration-container {
+        overflow: auto;
+        max-width: 400px;
         margin: 0 auto;
-      }
-
-      .form-row {
-        display: flex;
-        margin-bottom: 20px;
-        gap: 40px;
-      }
-
-      .form-row.single {
-        justify-content: center;
-      }
-
-      .form-row.double {
-        justify-content: space-between;
-      }
-
-      .form-group,
-      .form-group-reverse {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-width: 270px;
-        gap: 40px; /*хотел 20px, но иначе неодинаковые отступы получались, пока не решил эту проблему*/
-        flex: 1;
-      }
-
-      .form-group label {
-        min-width: 80px;
-        text-align: right;
-      }
-
-      .form-group-reverse {
-        justify-content: flex-start;
-      }
-
-      .form-row.single .form-group {
-        flex: 0 0 auto;
-      }
-
-      .form-group-col {
+        padding: 20px 40px 70px 40px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        /* min-height: 100vh; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
       }
 
-      label {
-        color: #8bc34a;
-        font-size: 1rem;
-        /* text-align: right; */
+      .header-quick-reg {
+        text-align: center;
       }
 
-      .from-group label {
-        min-width: 80px;
+      .logo-quick-reg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
       }
 
-      .form-input {
-        border: 2px dashed #87ceeb;
-        border-radius: 4px;
-        padding: 8px 12px;
-        width: 160px;
-        height: 20px;
-        background-color: white;
+      .logo-quick-reg-text {
+        font-size: 16px;
+        color: #94a3b8;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .registration-form {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .form-group-quick-reg {
+        margin-bottom: 30px;
+      }
+
+      .form-label-quick-reg {
+        display: block;
+        margin-bottom: 8px;
+        color: #84cc16;
         font-size: 14px;
+        font-weight: 500;
       }
 
-      .form-input:focus {
+      .form-input-quick-reg {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #7dd3fc;
+        border-radius: 6px;
+        font-size: 14px;
+        background-color: white;
         outline: none;
-        /* border-color: #5dade2; */
+        transition: border-color 0.2s ease;
+        box-sizing: border-box;
       }
 
-      .button-section {
-        text-align: center;
-        margin: 40px 0 20px 0;
-      }
+      /* .form-input:focus {
+    border-color: #0ea5e9;
+  } */
 
-      .register-btn {
+      .register-button {
+        width: 100%;
+        padding: 12px 16px;
         background-color: white;
-        border: 2px solid #8bc34a;
-        color: #333;
-        padding: 12px 30px;
-        border-radius: 4px;
+        border: 2px solid #84cc16;
+        border-radius: 6px;
+        color: #374151;
         font-size: 14px;
+        font-weight: 500;
         cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 20px;
       }
 
-      .text-block::hover,
-      .register-btn:hover {
-        background-color: #f0f8e8;
+      .register-button:hover {
+        background-color: #f0fdf4;
+        border-color: #65a30d;
       }
 
-      .quick-registration {
-        text-align: center;
-        margin: 0 0 0px 0;
-      }
-
-      .quick-link {
-        color: #87ceeb;
-        text-decoration: none;
-        font-size: 14px;
-        border-bottom: 1px solid #87ceeb;
-        padding-bottom: 2px;
-      }
-
-      .quick-link:hover {
-        color: #5dade2;
-        border-bottom-color: #5dade2;
+      body {
+        margin: 0;
+        padding: 0;
       }
     </style>
   </body>

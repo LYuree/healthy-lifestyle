@@ -44,6 +44,8 @@ body {
   /* background-color: #f8f9fa; */
   color: #333;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -159,7 +161,9 @@ main,
 .register-btn {
   font-family: "Fira Sans";
   background: white;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: 2px dashed #a8d5ba;
+
   padding: 12px 30px;
   font-size: 1.5rem;
   color: #333;
@@ -203,14 +207,19 @@ main,
 }
 
 .boxed-text {
-  font-family: "Gret Vibes";
-  font-size: 1.75rem;
+  font-family: "Great Vibes";
+  font-size: 3rem;
   display: inline-block;
   border: 2px dashed #a8d5ba;
-  padding: 8px 15px;
+  border-radius: 4px;
+  padding: 25px 30px;
   margin: 0 5px;
   font-style: italic;
-  background: rgba(168, 213, 186, 0.1);
+  transition: 0.25s;
+}
+
+.boxed-text:hover {
+  background: var(--light-green-100);
 }
 
 .text-block {
@@ -666,5 +675,183 @@ main.main-register {
 
   .subtitle {
     font-size: 36px;
+  }
+}
+
+/* Стили для register.html */
+
+.logo-register {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  color: #87ceeb;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.form-row.single {
+  justify-content: center;
+}
+
+.form-row.double {
+  justify-content: space-between;
+}
+
+.form-group,
+.form-group-reverse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 270px;
+  gap: 40px; /*хотел 20px, но иначе неодинаковые отступы получались, пока не решил эту проблему*/
+  flex: 1;
+}
+
+.form-group label {
+  min-width: 80px;
+  text-align: right;
+}
+
+.form-group-reverse {
+  justify-content: flex-start;
+}
+
+.form-row.single .form-group {
+  flex: 0 0 auto;
+}
+
+.form-group-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+label {
+  color: #8bc34a;
+  font-size: 1rem;
+  /* text-align: right; */
+}
+
+.from-group label {
+  min-width: 80px;
+}
+
+.form-input {
+  border: 2px dashed #87ceeb;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 160px;
+  height: 40px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  outline: none;
+  /* border-color: #5dade2; */
+}
+
+.button-section {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.register-btn {
+  background-color: white;
+  border: 2px dashed #a8d5ba;
+  color: #333;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.text-block::hover,
+.register-btn:hover {
+  background-color: #f0f8e8;
+}
+
+.quick-registration {
+  text-align: center;
+  margin: 0 0 0px 0;
+}
+
+.quick-reg-link {
+  color: #87ceeb;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #87ceeb;
+  padding-bottom: 2px;
+}
+
+.quick-reg-link:hover {
+  color: #5dade2;
+  border-bottom-color: #5dade2;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Stack form rows vertically */
+    gap: 20px; /* Reduce gap between rows */
+  }
+
+  .form-group,
+  .form-group-reverse {
+    flex-direction: column; /* Stack form groups vertically */
+    align-items: flex-start; /* Align items to the start */
+    min-width: auto; /* Remove min-width constraint */
+    gap: 10px; /* Adjust gap for better spacing */
+  }
+
+  .form-group label {
+    text-align: left; /* Align labels to the left for better readability */
+    min-width: auto; /* Remove min-width constraint */
+  }
+
+  .form-input {
+    width: 100%; /* Make inputs full width */
+    padding: 10px;
+  }
+
+  .button-section {
+    margin: 20px 0; /* Adjust margin for button section */
+  }
+
+  .register-btn {
+    width: 100%; /* Make button full width */
+    padding: 12px; /* Adjust padding for better touch targets */
+  }
+
+  .quick-registration {
+    margin: 20px 0; /* Add margin for spacing */
+  }
+
+  .form-group-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .form-row.single label {
+    align-self: flex-start;
+  }
+
+  .form {
+    max-width: 350px;
   }
 }

@@ -1,118 +1,135 @@
-<div class="registration-container">
-  <div class="header">
-    <div class="logo">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 18V12C3 9.79086 4.79086 8 7 8H17C19.2091 8 21 9.79086 21 12V18" stroke="#7DD3FC" stroke-width="2" stroke-linecap="round"/>
-        <path d="M7 8V6C7 3.79086 8.79086 2 11 2H13C15.2091 2 17 3.79086 17 6V8" stroke="#7DD3FC" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="9" cy="14" r="1" fill="#7DD3FC"/>
-        <circle cx="15" cy="14" r="1" fill="#7DD3FC"/>
-      </svg>
-      <span class="logo-text">ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ</span>
+<dialog class="reg-modal" id="reg-modal">
+  <div class="registration-container">
+    <div class="header-quick-reg">
+      <div class="logo-quick-reg">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 18V12C3 9.79086 4.79086 8 7 8H17C19.2091 8 21 9.79086 21 12V18"
+            stroke="#7DD3FC"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M7 8V6C7 3.79086 8.79086 2 11 2H13C15.2091 2 17 3.79086 17 6V8"
+            stroke="#7DD3FC"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <circle cx="9" cy="14" r="1" fill="#7DD3FC" />
+          <circle cx="15" cy="14" r="1" fill="#7DD3FC" />
+        </svg>
+        <span class="logo-quick-reg-text">ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ</span>
+      </div>
     </div>
+
+    <form class="registration-form">
+      <div class="form-group-quick-reg">
+        <label class="form-label-quick-reg">Псевдоним</label>
+        <input type="text" class="form-input-quick-reg" />
+      </div>
+
+      <div class="form-group-quick-reg">
+        <label class="form-label-quick-reg">Почта или номер телефона</label>
+        <input type="text" class="form-input-quick-reg" />
+      </div>
+
+      <button type="submit" class="register-button">Зарегистрироваться</button>
+    </form>
   </div>
-  
-  <form class="registration-form">
-    <div class="form-group">
-      <label class="form-label">Псевдоним</label>
-      <input type="text" class="form-input" />
-    </div>
-    
-    <div class="form-group">
-      <label class="form-label">Почта или номер телефона</label>
-      <input type="text" class="form-input" />
-    </div>
-    
-    <button type="submit" class="register-button">Зарегистрироваться</button>
-  </form>
-</div>
+</dialog>
 
 <style>
-.registration-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #fafafa;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .registration-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.header {
-  margin-bottom: 60px;
-  text-align: center;
-}
+  .header-quick-reg {
+    margin-bottom: 60px;
+    text-align: center;
+  }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
+  .logo-quick-reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 
-.logo-text {
-  font-size: 16px;
-  color: #94a3b8;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
+  .logo-quick-reg-text {
+    font-size: 16px;
+    color: #94a3b8;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
 
-.registration-form {
-  width: 100%;
-  max-width: 320px;
-}
+  .registration-form {
+    width: 100%;
+    max-width: 320px;
+  }
 
-.form-group {
-  margin-bottom: 30px;
-}
+  .form-group-quick-reg {
+    margin-bottom: 30px;
+  }
 
-.form-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #84cc16;
-  font-size: 14px;
-  font-weight: 500;
-}
+  .form-label-quick-reg {
+    display: block;
+    margin-bottom: 8px;
+    color: #84cc16;
+    font-size: 14px;
+    font-weight: 500;
+  }
 
-.form-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #7dd3fc;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: white;
-  outline: none;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
-}
+  .form-input-quick-reg {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #7dd3fc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
 
-.form-input:focus {
-  border-color: #0ea5e9;
-}
+  /* .form-input:focus {
+    border-color: #0ea5e9;
+  } */
 
-.register-button {
-  width: 100%;
-  padding: 12px 16px;
-  background-color: white;
-  border: 2px solid #84cc16;
-  border-radius: 6px;
-  color: #374151;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: 20px;
-}
+  .register-button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: white;
+    border: 2px solid #84cc16;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+  }
 
-.register-button:hover {
-  background-color: #f0fdf4;
-  border-color: #65a30d;
-}
+  .register-button:hover {
+    background-color: #f0fdf4;
+    border-color: #65a30d;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
+  body {
+    margin: 0;
+    padding: 0;
+  }
 </style>
