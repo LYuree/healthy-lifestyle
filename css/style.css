@@ -104,7 +104,7 @@ main,
 .hamburger div {
   width: 30px;
   height: 3px;
-  background-color: #666;
+  background-color: var(--light-blue);
   margin: 4px 0;
 }
 
@@ -133,7 +133,7 @@ main,
   font-size: 65px;
   font-style: italic;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: "Great Vibes"; /* Use the font */
   line-height: 1;
 }
@@ -234,7 +234,6 @@ main {
 }
 
 main.index-main {
-  margin-bottom: 60px;
   border: none;
 }
 
@@ -413,6 +412,15 @@ main.main-register {
   border-radius: 2px;
 }
 
+.footer-content li {
+  margin-bottom: 20px;
+}
+
+.footer-section,
+.search-container {
+  margin-top: 30px;
+}
+
 .footer-section h4 {
   font-size: 14px;
   font-weight: 600;
@@ -425,7 +433,8 @@ main.main-register {
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .footer-section ul li a {
@@ -442,15 +451,20 @@ main.main-register {
 
 .footer-content ul li a:visited {
   color: #000;
+  text-decoration: none;
 }
 
 .search-container {
   position: relative;
   width: auto; /* Allow width to adjust on smaller screens */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-container label {
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .search-input {
@@ -499,16 +513,26 @@ main.main-register {
 }
 
 .search-btn {
-  position: absolute;
+  /* position: absolute;
   right: -0.5rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+  display: inline-block;
+  width: 40px;
+  height: 40px;
   border: none;
   cursor: pointer;
   background: var(--light-blue);
   color: white;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 50%;
+}
+
+.search-btn i {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer-nav-link {
@@ -536,7 +560,7 @@ main.main-register {
     font-size: 3.5rem;
   }
   .search-btn {
-    right: -3rem;
+    /* right: -3rem; */
   }
   .search-container {
     max-width: 210px;
@@ -586,12 +610,17 @@ main.main-register {
     gap: 20px; /* Adjust gap for smaller screens */
   }
 
+  .search-btn {
+    /* display: none; */
+  }
+
   .footer-content * {
     place-self: center;
   }
 
   .footer-logo {
     order: 3; /* Move footer-logo to the last position */
+    justify-content: center;
   }
 
   .copyright {
@@ -701,7 +730,7 @@ main.main-register {
 
 .form-row {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   gap: 40px;
 }
 
@@ -854,5 +883,6 @@ label {
 
   .form {
     max-width: 350px;
+    padding: 2rem;
   }
 }
