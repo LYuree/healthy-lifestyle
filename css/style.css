@@ -732,6 +732,7 @@ label {
   padding: 12px 30px;
   border-radius: 4px;
   font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
 }
 
