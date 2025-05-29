@@ -1,7 +1,11 @@
 :root {
   --light-blue: #8cd1ec;
-  --dark-green: #388f5a;
-  --light-green-300: #8ec92f;
+  --dark-green-100: #00441a;
+  --dark-green-200: #237040de;
+  --highlight-green: #5c8e5c;
+
+  /* --light-green-300: #8ec92f; */
+  --light-green-300: #a1c842;
   --light-green-100: #f0fdf4;
   /* --blue: ; */
 }
@@ -13,14 +17,14 @@
 }
 
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   src: url("../assets/fonts/Fira_Sans/FiraSans-Regular.ttf") format("truetype"); /* Adjust the filename if necessary */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   src: url("../assets/fonts/Fira_Sans/FiraSans-Bold.ttf") format("truetype"); /* If you have a bold version */
   font-weight: bold;
   font-style: normal;
@@ -66,17 +70,29 @@ main,
   margin: 0 82px;
 }
 
+main {
+  border-top: 3px dashed var(--light-green-300);
+  border-bottom: 3px dashed var(--light-green-300);
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
+.logo,
+.footer-logo {
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: #7bb3c7;
+  /* color: #7bb3c7; */
+  text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  font-weight: 450; /* Устанавливаем жирное начертание шрифта */
+  background: linear-gradient(to right, #8cd1ec, #000000);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav {
@@ -88,7 +104,7 @@ main,
   text-decoration: none;
   color: #666;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .nav a:hover {
@@ -133,7 +149,7 @@ main,
   font-size: 65px;
   font-style: italic;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-family: "Great Vibes"; /* Use the font */
   line-height: 1;
 }
@@ -141,10 +157,15 @@ main,
 .main-title {
   font-size: 80px;
   font-weight: 700;
-  color: var(--dark-green);
+  /* color: var(--dark-green); */
   margin: 20px 0;
   letter-spacing: 2px;
   line-height: 1;
+  background-color: var(--dark-green-100);
+  color: transparent;
+  text-shadow: 4px 2px 8px rgba(255, 255, 255, 0.479);
+  /* text-shadow: 0px 3px 4px #53af77; */
+  -webkit-background-clip: text;
 }
 
 .hero-section {
@@ -159,11 +180,10 @@ main,
 
 .register-btn-index,
 .register-btn {
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   background: white;
   /* border: 1px solid #ccc; */
-  border: 2px dashed #a8d5ba;
-
+  border: 1px dashed var(--light-green-300);
   padding: 12px 30px;
   font-size: 1.5rem;
   color: #333;
@@ -190,8 +210,7 @@ main,
 .content-section {
   margin: 0 auto;
   padding: 40px 0;
-  border-top: 3px dashed #a8d5ba;
-  border-bottom: 3px dashed #a8d5ba;
+  border-top: 3px solid var(--light-green-300);
 }
 
 .content-text {
@@ -202,7 +221,7 @@ main,
 }
 
 .highlight-green {
-  color: #6b8e23;
+  color: var(--highlight-green);
   font-weight: 600;
 }
 
@@ -210,7 +229,7 @@ main,
   font-family: "Great Vibes";
   font-size: 3rem;
   display: inline-block;
-  border: 2px dashed #a8d5ba;
+  border: 3px dashed var(--light-green-300);
   border-radius: 4px;
   padding: 25px 30px;
   margin: 0 5px;
@@ -229,160 +248,13 @@ main,
   cursor: pointer;
 }
 
-main {
-  border-bottom: 3px dashed #a8d5ba;
-}
-
-main.index-main {
-  border: none;
+.text-block span.boxed-text {
+  margin-top: 30px;
 }
 
 main.main-register {
-  border-top: 3px dashed #a8d5ba;
   padding: 36px 0;
 }
-
-/* .footer {
-  background: white;
-  padding: 40px 0;
-}
-  
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #7bb3c7;
-  width: 286px;
-}
-
-.footer-logo-icon {
-  width: 25px;
-  height: 15px;
-  background: #7bb3c7;
-  margin-right: 8px;
-  border-radius: 2px;
-}
-
-.footer-section h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.footer-content ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: #666;
-  font-size: 12px;
-}
-
-.footer-content ul li a:hover,
-.footer-content ul li a:visited:hover,
-.footer-section ul li a:hover {
-  color: #7bb3c7;
-}
-
-.footer-content ul li a:visited {
-  color: #000;
-}
-
-.footer-content ul li a {
-  text-decoration: none;
-}
-
-.search-container {
-  position: relative;
-  width: 200px;
-}
-
-.search-container label {
-  line-height: 1;
-}
-
-.search-input {
-  background: var(--light-blue);
-  border: none;
-  padding: 10px 40px 10px 15px;
-  border-radius: 20px;
-  color: white;
-  font-size: 20px;
-  width: 200px;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.copyright {
-  text-align: center;
-  font-size: 10px;
-  color: #999;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-}
-
-.fas {
-  flex-shrink: 0;
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-}
-
-.fa-questn {
-  background: url("../assets/images/circle-question.svg") no-repeat;
-}
-
-.fa-envp {
-  background: url("../assets/images/envelope.svg") no-repeat;
-}
-
-.fa-phn {
-  background: url("../assets/images/phone.svg") no-repeat;
-}
-
-.fa-cnts {
-  background: url("../assets/images/comments.svg") no-repeat;
-}
-
-.search-btn {
-  position: absolute;
-  right: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
-  background: var(--light-blue);
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.footer-nav-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  line-height: 1;
-}
-
-.search-input:focus {
-  outline: none;
-} */
 
 .footer {
   background: white;
@@ -394,6 +266,13 @@ main.main-register {
   grid-template-columns: repeat(4, minmax(120px, 1fr));
   gap: 40px;
   align-items: start;
+}
+
+@media screen and (width <= 1300px) {
+  .footer-content {
+    grid-template-columns: 240px 60px 120px 250px;
+    margin: auto;
+  }
 }
 
 .footer-logo {
@@ -468,6 +347,7 @@ main.main-register {
 }
 
 .search-input {
+  font-family: "Fira Sans", sans-serif;
   background: var(--light-blue);
   border: none;
   padding: 10px 40px 10px 15px;
@@ -486,7 +366,6 @@ main.main-register {
   color: #999;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
 }
 
 .fas {
@@ -645,6 +524,7 @@ main.main-register {
 
   .main-title {
     font-size: 65px;
+    text-shadow: 4px 2px 6px rgba(255, 255, 255, 0.479);
   }
 
   .subtitle {
@@ -655,6 +535,7 @@ main.main-register {
 @media screen and (width <= 1100px) {
   .main-title {
     font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.479);
   }
 }
 
@@ -773,9 +654,31 @@ main.main-register {
 }
 
 label {
-  color: #8bc34a;
+  color: var(--light-green-300);
   font-size: 1rem;
   /* text-align: right; */
+}
+
+.form-label-quick-reg {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--light-green-300);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: white;
+  border: 2px dashed var(--light-green-300);
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
 }
 
 .from-group label {
@@ -804,7 +707,7 @@ label {
 
 .register-btn {
   background-color: white;
-  border: 2px dashed #a8d5ba;
+  border: 3px dashed var(--light-green-300);
   color: #333;
   padding: 12px 30px;
   border-radius: 4px;
@@ -833,6 +736,83 @@ label {
 .quick-reg-link:hover {
   color: #5dade2;
   border-bottom-color: #5dade2;
+}
+
+.reg-modal {
+  border: none !important;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.registration-container {
+  overflow: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 40px 70px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-quick-reg {
+  text-align: center;
+}
+
+.logo-quick-reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo-quick-reg-text {
+  font-size: 16px;
+  color: #94a3b8;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.registration-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-group-quick-reg {
+  margin-bottom: 30px;
+}
+
+.form-input-quick-reg {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px dashed #7dd3fc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* .form-input:focus {
+    border-color: #0ea5e9;
+  } */
+
+.register-button:hover {
+  background-color: #f0fdf4;
+  border-color: #65a30d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+form * {
+  font-family: "Fira Sans", sans-serif;
 }
 
 /* Media Query for Small Screens */
