@@ -570,6 +570,7 @@ main.main-register {
 
   .nav.active {
     display: flex; /* Show nav when active */
+    padding: 40px;
     z-index: 1000;
   }
 

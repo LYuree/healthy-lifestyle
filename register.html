@@ -28,13 +28,18 @@
             </a>
             ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ
           </div>
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <a href="#">Питание</a>
             <a href="#">Сон</a>
             <a href="#">Спорт</a>
             <a href="#">Команда</a>
             <a href="#">Личный кабинет</a>
           </nav>
+          <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     </header>
@@ -321,5 +326,14 @@
         padding: 0;
       }
     </style>
+
+    <script defer>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
