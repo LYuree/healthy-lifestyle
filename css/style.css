@@ -107,6 +107,11 @@ main {
 
 .footer-logo-bold-links {
   font-weight: bold;
+  color: #000;
+}
+
+.footer-logo-bold-links:visited {
+  color: #000;
 }
 
 .nav {
