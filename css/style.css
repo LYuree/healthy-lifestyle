@@ -105,13 +105,13 @@ main {
   background-clip: text;
 }
 
-.footer-logo-bold-links {
+.footer-logo-bold-links a {
   font-weight: bold;
-  color: #000;
+  color: #000 !important;
 }
 
-.footer-logo-bold-links:visited {
-  color: #000;
+.footer-logo-bold-links a:visited {
+  color: #000 !important;
 }
 
 .nav {
