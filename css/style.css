@@ -134,7 +134,8 @@ main {
 .hamburger div {
   width: 30px;
   height: 3px;
-  background-color: var(--light-blue);
+  /* background-color: var(--light-blue); */
+  background: linear-gradient(to right, var(--light-blue), #000000);
   margin: 4px 0;
 }
 
